@@ -1,0 +1,15 @@
+# this is only part of input settings. 
+# should be used together with params.yaml and machines.yaml
+
+# training and testing systems
+systems_train: # can also be files that containing system paths
+  - ../systems/train_150_003
+  - ../systems/train_150_004
+  - ../systems/train_150_005
+  - ../systems/train_150_006
+  - ../systems/train_150_007
+  - ../systems/train_150_008
+
+systems_test: # if empty, use the last system of training set
+  - ../systems/test_30_003
+  - ../systems/test_30_004

@@ -1,0 +1,12 @@
+#PBS -q normal3
+#PBS -N c10h22_7
+#PBS -l nodes=1:ppn=24
+#PBS -l walltime=1000:00:00
+
+cd $PBS_O_WORKDIR
+
+source /home/pengchao/App/gcc/9.3.0/env.sh
+source /home/pengchao/App/cp2k/cp2k-9.1-voronoic-0106/tools/toolchain/install/setup
+export PATH=$PATH:/home/pengchao/App/cp2k/cp2k-9.1-voronoic-0106/exe/local
+
+mpirun -np 24 cp2k.popt cp2k.inp |tee cp2k.out
