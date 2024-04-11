@@ -14,7 +14,7 @@ Note: The above two web links have Chinese to English translations.
 
 ## 1. plumed_v2.8.1_patch
 Requiring the installation of the [OPES](https://www.plumed.org/doc-v2.8/user-doc/html/_o_p_e_s.html) module. 
-To use additional Voronoi CVs code, put .cpp [files](https://github.com/Zhang-pchao/GlycineTautomerism/tree/main/Voronoi_collective_variables) above into /your_plumed_path/plumed/src/colvar, and then compile plumed.
+To use additional Voronoi CVs code, put .cpp [files](https://github.com/Zhang-pchao/GlycineTautomerism/tree/main/Voronoi_collective_variables) into /your_plumed_path/plumed/src/colvar, and then compile plumed.
 
 ## 2. deepmd-kit_v2.1.5
 Incorporating lammps and plumed
