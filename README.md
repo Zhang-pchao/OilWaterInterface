@@ -1,7 +1,6 @@
 # Paper Title
 
 Propensity of water self-ions at air(oil)-water interfaces revealed by deep potential molecular dynamics with enhanced sampling (Under Review)
-[arXiv link](http://arxiv.org/abs/2404.07027)
 
 # Toturials
 
