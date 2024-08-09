@@ -6,4 +6,4 @@ VoronoiIM.cpp: This file is used to identify the oxygen index of the OH⁻ ion.
 
 VoronoiIP.cpp: This file is used to identify the oxygen index of the H₃O⁺ ion.
 
-Running DPMD with Voronoi CVs to identify the ionic oxygen index can be affected by the Grotthuss mechanism of proton transfer, causing fluctuations in the index. To use the traditional MSD calculation method, we need to create a fake trajectory using a Python script, input it into VMD, and then calculate the ionic diffusion coefficient based on the [reference](https://www.theoj.org/joss-papers/joss.01698/10.21105.joss.01698.pdf).
+Running DPMD with Voronoi CVs to identify the ionic oxygen index can be affected by the Grotthuss mechanism of proton transfer, causing fluctuations in the index. To use the traditional MSD (Mean Squared Displacement) calculation method, we need to create a fake trajectory using a Python script, input it into [VMD](https://www.ks.uiuc.edu/Research/vmd/), and then calculate the ionic diffusion coefficient based on the [reference](https://www.theoj.org/joss-papers/joss.01698/10.21105.joss.01698.pdf).
