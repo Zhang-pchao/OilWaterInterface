@@ -1,0 +1,1 @@
+follow [plumed-feedstock](https://github.com/Zhang-pchao/plumed-feedstock/tree/devel) to overlay default plumed version or use [LOAD](https://www.plumed.org/doc-v2.8/user-doc/html/_l_o_a_d.html) command.
