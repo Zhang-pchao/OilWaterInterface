@@ -1,0 +1,114 @@
+#GEO from 001
+&GLOBAL
+  PROJECT c10h22
+  PRINT_LEVEL LOW
+  RUN_TYPE MD
+&END GLOBAL
+
+&FORCE_EVAL
+  METHOD Quickstep
+  &SUBSYS
+    &CELL
+      A    12.50000000     0.00000000     0.00000000
+      B     0.00000000    12.50000000     0.00000000
+      C     0.00000000     0.00000000    12.50000000
+      PERIODIC XYZ #Direction of applied PBC (geometry aspect)
+    &END CELL
+	&TOPOLOGY
+	  COORD_FILE_FORMAT XYZ
+	  COORD_FILE_NAME c10h22.xyz
+	&END TOPOLOGY
+  &END SUBSYS
+
+  &DFT
+          #   WFN_RESTART_FILE_NAME Glycine53H2O_OH_NH3CH2COOH-RESTART.wfn
+    CHARGE    0 #Net charge
+    MULTIPLICITY    1 #Spin multiplicity
+    &QS
+      EPS_DEFAULT 1E-10 #This is default. Set all EPS_xxx to values such that the energy will be correct up to this value
+      EXTRAPOLATION ASPC #Extrapolation for wavefunction during e.g. MD. ASPC is default, PS also be used
+      EXTRAPOLATION_ORDER 3 #Order for PS or ASPC extrapolation. 3 is default
+      METHOD xTB
+      &xTB
+        DO_EWALD T
+        CHECK_ATOMIC_CHARGES F #xTB calculation often crashes without setting this to false
+        &PARAMETER
+          DISPERSION_PARAMETER_FILE dftd3.dat
+          PARAM_FILE_NAME xTB_parameters
+        &END PARAMETER
+      &END xTB
+    &END QS
+    &POISSON
+      PERIODIC XYZ #Direction(s) of PBC for calculating electrostatics
+      PSOLVER PERIODIC #The way to solve Poisson equation
+    &END POISSON
+    &SCF
+      MAX_SCF 200 #Should be set to a small value (e.g. 30) if enabling outer SCF
+      EPS_SCF 1.0E-05 #Convergence threshold of density matrix during SCF
+#     SCF_GUESS RESTART #Use wavefunction from WFN_RESTART_FILE_NAME file as initial guess
+      &OT
+        PRECONDITIONER FULL_SINGLE_INVERSE
+        MINIMIZER DIIS #CG is worth to consider in difficult cases
+        LINESEARCH 2PNT #1D line search algorithm for CG. 2PNT is default, 3PNT is better but more costly. GOLD is best but very expensive
+      &END OT
+      #Uncomment following lines can enable outer SCF
+      #&OUTER_SCF
+      #  MAX_SCF 20 #Maximum number of steps of outer SCF
+      #  EPS_SCF 1.0E-05 #Convergence threshold of outer SCF
+      #&END OUTER_SCF
+      &PRINT
+        &RESTART #Use "&RESTART OFF" can prevent generating wfn file
+          BACKUP_COPIES 0 #Maximum number of backup copies of wfn file
+        &END RESTART
+      &END PRINT
+    &END SCF
+  &END DFT
+&END FORCE_EVAL
+
+&MOTION
+  &MD
+    ENSEMBLE NVT
+    STEPS 500000
+    TIMESTEP 1.0 #fs. Decrease it properly for high temperature simulation
+    TEMPERATURE 300 #Initial and maintained temperature (K)
+    &THERMOSTAT
+      TYPE CSVR
+      &CSVR
+        TIMECON 200 #Time constant in fs. Smaller/larger results in stronger/weaker temperature coupling
+      &END CSVR
+    &END THERMOSTAT
+  &END MD
+
+  &FREE_ENERGY
+    &METADYN
+      USE_PLUMED .TRUE.
+      PLUMED_INPUT_FILE ./plumed.dat
+    &END METADYN
+  &END FREE_ENERGY 
+  
+  &PRINT
+    &TRAJECTORY
+      &EACH
+        MD   100 #Output frequency of geometry
+      &END EACH
+      FORMAT xyz
+    &END TRAJECTORY
+    &VELOCITIES
+      &EACH
+        MD   100 #Output frequency of velocity
+      &END EACH
+    &END VELOCITIES
+    &RESTART
+      BACKUP_COPIES 0 #Maximum number of backing up restart file
+      &EACH
+        MD 500000 #Frequency of updating last restart file
+      &END EACH
+    &END RESTART
+  &END PRINT
+&END MOTION
+
+&EXT_RESTART
+  RESTART_FILE_NAME cp2k.603500.restart
+#!!  RESTART_COUNTERS .FALSE.
+#!!  RESTART_THERMOSTAT .FALSE.
+&END EXT_RESTART
