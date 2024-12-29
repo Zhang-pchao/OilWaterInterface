@@ -29,7 +29,7 @@ These CVs calculate the ionic charges in water systems, such as during the autoi
    Calculates the ionic distance between one OH⁻ ion and one H₃O⁺ ion.
 
 ### 3. `CV_for_ion_index`
-These CVs are used to identify the indices of ions in the system.
+These CVs are used to identify the indices of ions in the system. Refer [here](https://github.com/Zhang-pchao/OilWaterInterface/tree/main/Ion_Diffusion_Coefficient) to calculate the ionic diffusion coefficients.
 
 - **`VoronoiIM.cpp`**  
    Identifies the oxygen index of the OH⁻ ion.
