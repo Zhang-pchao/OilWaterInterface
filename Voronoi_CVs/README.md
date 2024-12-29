@@ -26,7 +26,6 @@ These CVs calculate the ionic charges in water systems, such as during the autoi
    Calculates the total positive ionic charge of H₃O⁺.
 
 ### 2. `CV_for_ion_distance`
-These CVs calculate distances between ions in the system.
 
 - **`VoronoiD1.cpp`**  
    Calculates the ionic distance between one OH⁻ ion and one H₃O⁺ ion.
@@ -45,7 +44,7 @@ These CVs are used to identify the absolute location of ions in a slab system, r
 
 - **`VoronoiIMZ.cpp`**  
    Identifies the absolute location of the OH⁻ ion along the z-axis relative to the reference layer in a slab system.  
-   - Example: Set `ZIDX=2` to calculate the z-axis location.  
+   - [Example](https://github.com/Zhang-pchao/OilWaterInterface/blob/main/Molecular_Dynamics/Enhanced_Sampling/DPMD/air_water_slab/input.plumed): Set `ZIDX=2` to calculate the z-axis location.  
    - Set `ZMID=53` to define the reference layer at 53 Ångströms along the z-axis.
 
 - **`VoronoiIPZ.cpp`**  
