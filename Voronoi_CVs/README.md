@@ -1,6 +1,4 @@
-# Voronoi Collective Variables (CVs) for Ion Systems
-
-This repository contains a set of Collective Variables (CVs) for simulating ion behavior in various systems using PLUMED. These CVs are particularly useful for studying the ionization of water molecules, ion distances, and ion localization in a slab system.
+These CVs are particularly useful for studying the autoionization of water molecules, ion distances, and ion localization in a slab system. However, the methodology is not limited to water; it can be extended to other systems with similar mechanisms.
 
 ## Installation
 
