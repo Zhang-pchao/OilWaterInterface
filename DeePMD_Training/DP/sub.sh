@@ -1,11 +1,3 @@
-#!/bin/bash
-#PBS -l select=1:ncpus=4:mpiprocs=1:ngpus=1:ompthreads=4
-#PBS -l walltime=23:50:00
-#PBS -q gpu
-#PBS -o dptrain.out
-#PBS -j oe
-#PBS -N oil100
-
 # change dir submission dir
 cd $PBS_O_WORKDIR
 
