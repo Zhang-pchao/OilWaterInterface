@@ -16,7 +16,9 @@ Note: The above web links have Chinese to English translations.
 
 # Dataset and model
 
-The datasets for training or testing the DP and DC models are uploaded to [AIS Square]() and [Zenodo](https://zenodo.org/records/14470619).
+The datasets for training and testing the [DP](https://github.com/Zhang-pchao/OilWaterInterface/tree/main/DeePMD_Training/DP) and [DC](https://github.com/Zhang-pchao/OilWaterInterface/tree/main/DeePMD_Training/DC) models are uploaded to [AIS Square](https://www.aissquare.com/datasets/detail?pageType=datasets&id=299) and [Zenodo](https://zenodo.org/records/14780363).
+
+The compressed DP model is uploaded to [AIS Square](https://www.aissquare.com/models/detail?pageType=models&id=298) and [Zenodo](https://zenodo.org/records/14780363).
 
 # Packages Used
 
