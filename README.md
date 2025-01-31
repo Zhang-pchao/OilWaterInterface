@@ -1,7 +1,6 @@
 # Paper Title
 
-Propensity of water self-ions at air(oil)-water interfaces revealed by deep potential molecular dynamics with enhanced sampling (Under Review)
-[arXiv link](https://arxiv.org/abs/2404.07027)
+Propensity of water self-ions at air(oil)-water interfaces revealed by deep potential molecular dynamics with enhanced sampling, [Langmuir](https://pubs.acs.org/doi/full/10.1021/acs.langmuir.4c05004). [arXiv](https://arxiv.org/abs/2404.07027)
 
 # Toturials
 
@@ -14,6 +13,10 @@ Propensity of water self-ions at air(oil)-water interfaces revealed by deep pote
 [Voronoi CVs for enhanced sampling autoionization and tautomerism](https://bohrium.dp.tech/notebooks/83327491785)
 
 Note: The above web links have Chinese to English translations.
+
+# Dataset and model
+
+The datasets for training or testing the DP and DC models are uploaded to [AIS Square]() and [Zenodo](https://zenodo.org/records/14470619).
 
 # Packages Used
 
