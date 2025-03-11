@@ -20,6 +20,8 @@ The datasets for training and testing the [DP](https://github.com/Zhang-pchao/Oi
 
 The compressed DP model is uploaded to [AIS Square](https://www.aissquare.com/models/detail?pageType=models&id=298) and [Zenodo](https://zenodo.org/records/14780363).
 
+DC model training steps are available [here](https://github.com/Zhang-pchao/predict_atomic_charge).
+
 # Packages Used
 
 ## 1. plumed_v2.8.1_patch
