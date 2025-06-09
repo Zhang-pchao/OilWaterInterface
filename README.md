@@ -1,19 +1,3 @@
-## Paper Title
-
-Propensity of water self-ions at air(oil)-water interfaces revealed by deep potential molecular dynamics with enhanced sampling, [Langmuir](https://pubs.acs.org/doi/full/10.1021/acs.langmuir.4c05004). [arXiv](https://arxiv.org/abs/2404.07027)
-
-```bibtex
-@article{Zhang_Langmuir_2025_v41_p3675,
-  title        = {{Propensity of Water Self--Ions at Air(Oil)--Water Interfaces Revealed by Deep Potential Molecular Dynamics with Enhanced Sampling}},
-  author       = {Pengchao Zhang and Xuefei Xu},
-  year         = 2025,
-  journal      = {Langmuir},
-  volume       = 41,
-  number       = 5,
-  pages        = {3675--3683},
-  doi          = {10.1021/acs.langmuir.4c05004},
-}
-
 ## Toturials
   - [From DFT to DeePKS to DeePMD | DeePKS Basics](https://nb.bohrium.dp.tech/detail/8742877753)
   - [From DFT to DeePKS to DeePMD | DeePKS Toturials](https://nb.bohrium.dp.tech/detail/7144731675)
@@ -41,3 +25,19 @@ To use additional Voronoi CVs code, put [.cpp files](https://github.com/Zhang-pc
 
 ## 5. cp2k_v9.1
 Incorporating plumed
+
+## Paper Title
+
+Propensity of water self-ions at air(oil)-water interfaces revealed by deep potential molecular dynamics with enhanced sampling, [Langmuir](https://pubs.acs.org/doi/full/10.1021/acs.langmuir.4c05004). [arXiv](https://arxiv.org/abs/2404.07027)
+
+```bibtex
+@article{Zhang_Langmuir_2025_v41_p3675,
+  title        = {{Propensity of Water Self--Ions at Air(Oil)--Water Interfaces Revealed by Deep Potential Molecular Dynamics with Enhanced Sampling}},
+  author       = {Pengchao Zhang and Xuefei Xu},
+  year         = 2025,
+  journal      = {Langmuir},
+  volume       = 41,
+  number       = 5,
+  pages        = {3675--3683},
+  doi          = {10.1021/acs.langmuir.4c05004},
+}
